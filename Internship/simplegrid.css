@@ -1,0 +1,279 @@
+
+ @import url('https://codepen.io/jasper/pen/Gjaemx');
+  @import url('https://cdnjs.cloudflare.com/ajax/libs/Buttons/2.0.0/css/buttons.min.css');
+  @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+  @import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css');
+
+$siteBgColor: #00605B;
+$siteTextColor: #ffffff;
+$linkColor: #C29450;
+$linkHoverColor: #69606B;
+$headerTextColor: #fff;
+$headerLinkColor: #C29450;
+$headerLinkHoverColor: #69606B;
+
+body {
+  font-family: 'Oxygen', sans-serif;
+  line-height: 1.55;
+}
+
+h1,h2,h3,h4,h5,h6,
+.button {
+  font-family: 'Fjalla One', sans-serif;
+}
+
+.claim {
+  background-color: $siteBgColor;
+}
+.scream {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+// Some Helper Classes
+.text-shadow {
+  text-shadow: 1px 0 1px rgba(18,18,18,0.8);
+}
+a:link {
+    color: green;
+}
+
+/* visited link */
+a:visited {
+    color: green;
+}
+
+/* mouse over link */
+a:hover {
+    color: red;
+}
+
+/* selected link */
+a:active {
+    color: yellow;
+} 
+
+.button {
+  color: #fff;
+  text-shadow: none;
+}
+	  .button i {
+    padding-left: 0;
+    transition: all 100ms ease-in-out;
+  }
+	
+  .button:hover i {
+    padding-left: 10px;
+  }
+.button-giant {
+  font-size: 20px;
+}
+.button.button-jonas {
+  background: #29D9C2;
+	color: #fff;
+	}
+  .button.button-jonas:hover {
+    background: #FE6D01;
+    color: black;
+  }
+  .button.button-jonas:active {
+    background: #D65C06;
+    color: #fff;
+  }
+.btn.pill{
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  border-radius: 16px;
+}
+
+.claim--contents {
+  display: flex;
+  flex-flow: column nowrap;
+  align-content: flex-start;
+  justify-content: center;
+  align-items: center;
+  opacity: .75;
+  background: url(http://file03.16sucai.com/2017/1100/16sucai_V579E7G113.JPG) center center no-repeat;
+  background-attachment: scroll;
+  background-size: 1920px 1080px;
+  min-height: 100vh;
+  padding: 2vh 2vw;
+  text-align: center;
+  color: $siteTextColor;
+  @extend .text-shadow;
+  
+  
+}
+.claim--components h1 {
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: -.04em;
+    color: $headerTextColor;
+  }
+.claim--components h2 {
+    margin-bottom: $spacingOnElements;
+  }
+.container .grid {
+  margin-top: 2em;
+}
+
+footer {
+  text-align: left;
+
+  
+}
+.footer ul {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+  }
+.closure {
+  text-align: center;
+  font-size: 12px;
+  padding: 5px 0;
+ 
+}
+ .closure p {
+    margin: 0;
+    padding: 0;
+  }
+
+@media screen and (min-width: 1024px) {
+  
+  .button-giant {
+    font-size: 28px;
+  }
+  .claim--contents {
+    align-content: center;
+    padding: 0 20vw;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+}
+
+
+[class*='grid'],
+[class*='col-'],
+[class*='mobile-'],
+.grid:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;	
+}
+
+[class*='col-'] {
+	float: left;
+  	min-height: 1px;
+	padding-right: 20px; /* column-space */
+}
+
+[class*='col-'] [class*='col-']:last-child {
+	padding-right: 0;
+}
+
+.grid {
+	width: 100%;
+	max-width: 1140px;
+	min-width: 748px; /* when using padded grid on ipad in portrait mode, width should be viewport-width - padding = (768 - 20) = 748. actually, it should be even smaller to allow for padding of grid containing element */
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.grid:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.grid-pad {
+	padding-top: 20px;
+	padding-left: 20px; /* grid-space to left */
+	padding-right: 0; /* grid-space to right: (grid-space-left - column-space) e.g. 20px-20px=0 */
+}
+
+.push-right {
+	float: right;
+}
+
+/* Content Columns */
+
+.col-1-1 {
+	width: 100%;
+}
+.col-2-3, .col-8-12 {
+	width: 66.66%;
+}
+
+.col-1-2, .col-6-12 {
+	width: 50%;
+}
+
+.col-1-3, .col-4-12 {
+	width: 33.33%;
+}
+
+.col-1-4, .col-3-12 {
+	width: 25%;
+}
+
+
+
+@media handheld, only screen and (max-width: 767px) {
+	.grid {
+		width: 100%;
+		min-width: 0;
+		margin-left: 0;
+		margin-right: 0;
+		padding-left: 20px; /* grid-space to left */
+		padding-right: 10px; /* grid-space to right: (grid-space-left - column-space) e.g. 20px-10px=10px */
+	}
+
+	[class*='col-'] {
+		width: auto;
+		float: none;
+		margin: 10px 0;
+		padding-left: 0;
+		padding-right: 10px; /* column-space */
+	}
+
+	[class*='col-'] [class*='col-'] {
+		padding-right: 0;
+	}
+
+	/* Mobile Layout */
+
+	[class*='mobile-col-'] {
+		float: left;
+		margin: 0 0 10px;
+		padding-left: 0;
+		padding-right: 10px; /* column-space */
+		padding-bottom: 0;
+	}
+
+	.mobile-col-1-1 {
+		width: 100%;
+	}
+	.mobile-col-2-3, .mobile-col-8-12 {
+		width: 66.66%;
+	}
+
+	.mobile-col-1-2, .mobile-col-6-12 {
+		width: 50%;
+	}
+
+	.mobile-col-1-3, .mobile-col-4-12 {
+		width: 33.33%;
+	}
+
+	.mobile-col-1-4, .mobile-col-3-12 {
+		width: 25%;
+	}
+
+
+	.hide-on-mobile {
+		display: none !important;
+		width: 0;
+		height: 0;
+	}
+}
+

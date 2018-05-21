@@ -1,0 +1,206 @@
+<html>
+<head>
+ <title>Lists</title>
+</head>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+}
+
+/* Style the images inside the grid */
+.column img {
+    opacity: 0.8; 
+    cursor: pointer; 
+}
+
+.column img:hover {
+    opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* The expanding image container */
+.container {
+    position: relative;
+    display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+ .button {
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.thin-header-border {
+
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 5%;
+  }
+  
+  
+body {
+padding: 20px;}
+h1, h2, h3, a {
+font-weight: normal;
+color: #0088dd;
+margin: 0px;}
+
+h2 {
+font-family: "Gill Sans", Arial, sans-serif;
+font-size: 90%;
+text-transform: uppercase;
+letter-spacing: 0.2em;}
+
+p {
+font-family: Arial, Verdana, sans-serif;
+line-height: 1.4em;
+color: #665544;}
+p.intro:first-line {
+font-weight: bold;}
+.credits {
+font-style: italic;
+text-align: right;}
+a {
+text-decoration: none;}
+a:hover {
+text-decoration: underline;}
+ 
+</style>
+<body>
+	<header class ="thin-header-border ">
+<section>
+	<figure>
+<h2 class="red-text">CSS APP</h2>
+
+<p>Click here for <a href="#">Link </a>.</p>
+
+
+<div style="text-align:center">
+  <h2>Tabbed Image Gallery</h2>
+  <p>Click on the images below to expand:</p>
+</div>
+
+<!-- The four columns -->
+<div class="row">
+  <div class="column">
+    <img src="4.png" alt="Nature" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="5.png" alt="Fjords" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="6.jpg" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+  </div>
+
+</div>
+
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:100%">
+  <div id="imgtext"></div>
+</div>
+
+<script>
+function myFunction(imgs) {
+    var expandImg = document.getElementById("expandedImg");
+    var imgText = document.getElementById("imgtext");
+    expandImg.src = imgs.src;
+    imgText.innerHTML = imgs.alt;
+    expandImg.parentElement.style.display = "block";
+}
+</script>
+<figcaption>
+ Using CSS Flex to add images side by side
+ </figcaption>
+</figure>
+</section>
+</header>
+<section>
+ <h1>Scrambled Eggs</h1>
+ <p>Eggs are one of my favourite foods. Here is a
+ recipe for deliciously rich scrambled eggs.</p>
+ <h2>Ingredients</h2>
+ <ul class="red-text">
+ <li>2 eggs</li>
+ <li>1tbs butter</li>
+ <li>2tbs cream</li>
+ </ul>
+</section>
+<section class="blue-text">
+	<button class="button"><a href="#"><span>Hover </span></button>
+ 
+
+ </section>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!doctype html>
+
+<html>
+	<style>
+		* {
+    box-sizing: border-box;
+}
+		.thin-header-border {
+
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 5%;
+  }
+		.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+	text-align: center;
+			
+}
+		.color{
+			background-color: aqua;
+		}
+		.color2{
+			background-color:yellowgreen;
+		}
+		.button{
+			text-align: center;
+			color:green;
+			
+			margin-left:auto;
+      margin-right:auto;
+    		cursor: pointer;
+		}
+/* Style the images inside the grid */
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+		.red{
+			background-color: pink;
+		}
+.button1 {background-color: #4CAF50;} /* Green */
+.button2 {background-color: #008CBA;} /* Blue */
+.button3 {background-color: #f44336;} /* Red */ 
+	.header {
+}
+    </style>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+	<script>
+function myFunction() {
+    document.getElementById("h1").style.backgroundColor = "red";
+}
+</script>
+<body>
+	<header id="h1" class="thin-header-border " >
+		
+		<div class="row">
+			<div class="column " style="background-color: aqua">
+				<p> this is column 1 of the header</p>
+			</div>
+			<div class="column ">
+				<p> this is column 2 of the header</p>
+			</div>
+		</div>
+	  
+		
+	</header>
+	
+	
+	<section id="add buttons here"  style="align-items: end">
+			<button name="green" type="button" onclick="myFunction2()" class="button">Green</button>
+	<button name="blue" type="button" onclick="myFunction1()" class="button button2">Blue</button>
+<button type="button" class="button button3" onclick="myFunction()" >Red</button>
+</section>
+	
+	<script>
+function myFunction() {
+    document.getElementById("S3").style.backgroundColor = "red";
+	 document.getElementById("S4").style.backgroundColor = "red";
+	document.getElementById("S2").style.backgroundColor = "red";
+	document.getElementById("h1").style.backgroundColor = "red";
+}
+		function myFunction1() {
+    document.getElementById("S3").style.backgroundColor = "blue";
+	 document.getElementById("S4").style.backgroundColor = "blue";
+	document.getElementById("S2").style.backgroundColor = "blue";
+	document.getElementById("h1").style.backgroundColor = "blue";
+}
+		function myFunction2() {
+    document.getElementById("S3").style.backgroundColor = "green";
+	 document.getElementById("S4").style.backgroundColor = "green";
+	document.getElementById("S2").style.backgroundColor = "green";
+	document.getElementById("h1").style.backgroundColor = "green";
+}
+		
+</script>
+	
+	
+<section id="S2" style="background-color: beige">
+		<div class="row">
+			<div class="column ">
+				<p> this is column 1 of the header</p>
+			</div>
+			<div class="column ">
+				<p> this is column 2 of the header</p>
+			</div>
+		</div>
+	</section>
+	<br>
+	
+<section id="S3" style="background-color: blueviolet; width: 100%;  padding: 10px;">
+		<div class="thin-header-border" style="width: 10%; padding: 30px; background-color: palevioletred">
+		</div>
+		
+		<div class="thin-header-border" style="width: 50%;  background-color: palevioletred; margin-left: auto; margin-right: 0; ">
+			<p>bdbdhbch</p>
+		</div>
+	</section><br>
+	
+	
+<footer id="S4" class="thin-header-border red" >
+		<div>
+		<p> the backgrond is initialyy pink</p></div>
+		
+</footer>
+
+
+</body>
+</html>
