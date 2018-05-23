@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+	<style>
+		* {
+    box-sizing: border-box;
+}
+		.border-def{
+			 border-style: solid;
+			border-width: 1px;
+			border-color: black;
+			border-radius: 5%;
+		}
+		.abc{
+			width: 25%; height: 350px; float: right
+		}
+		.button {
+			padding: 1px;
+    background-color: #4CAF50; /* Green */	
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+			width: 24%;
+			
+			height: 100px;
+			border-color: #000000;
+}
+		
+	</style>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+	<div class="border-def">
+		<p style="text-align: center">This is header</p>
+	</div>
+	<br>
+	<hr />
+	<button id="btn1" type="button" class="button">1</button>
+	<button id="btn2" type="button" class="button" style="background-color: red">2</button>
+	<button id="btn3" type="button" class="button" style="background-color: blue">3</button>
+	
+	<div id="basic" class="border-def abc" ></div>
+	<br>
+	<button id="btn4" type="button" class="button" style="background-color: cyan">4</button>
+	<button id="btn5" type="button" class="button" style="background-color: palegreen">5</button>
+	<button id="btn6" type="button" class="button" style="background-color:blueviolet">6</button>
+	<br>
+	<button id="btn7" type="button" class="button" style="background-color: midnightblue">7</button>
+	<button id="btn8" type="button" class="button" style="background-color: coral">8</button>
+	<button id="btn9" type="button" class="button" style="background-color:plum">9</button>
+	
+	<script>
+		var c=document.createElement('div');
+				c.setAttribute("class","b1");
+			 c.innerText="initial child node";
+		document.getElementById('basic').appendChild(c);
+		document.getElementById('btn1').addEventListener('click',function(){var c=document.createElement('div');
+				c.setAttribute("class","b1");
+			 c.innerText="btn 1 is pressed";
+document.getElementById('basic').removeChild(document.getElementById('basic').childNodes[0]);   document.getElementById('basic').appendChild(c);								
+		document.getElementById('basic').setAttribute("style","background-color:green");});
+		document.getElementById('btn2').addEventListener('click',function(){
+			var c=document.createElement('div');
+				c.setAttribute("class","b2");
+			 c.innerText="btn 2 is pressed";
+			document.getElementById('basic').removeChild(document.getElementById('basic').childNodes[0]); 
+						document.getElementById('basic').appendChild(c);
+			document.getElementById('basic').setAttribute("style","background-color:red");
+		});
+		document.getElementById('btn3').addEventListener('click',function(){
+			var c=document.createElement('div');
+				c.setAttribute("class","b3");
+			 c.innerText="btn 3 is pressed";document.getElementById('basic').removeChild(document.getElementById('basic').childNodes[0]); 
+						document.getElementById('basic').appendChild(c);								
+			document.getElementById('basic').setAttribute("style","background-color:blue");
+		});
+	
+		
+	</script>
+	
+</body>
+</html>

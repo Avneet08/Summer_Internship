@@ -36,7 +36,7 @@
 /* Style the images inside the grid */
 
 /* Clear floats after the columns */
-.row:after {
+.row {
     content: "";
     display: table;
     clear: both;
@@ -76,31 +76,33 @@ function myFunction() {
 	
 	
 	<section id="add buttons here"  style="align-items: end">
-			<button name="green" type="button" onclick="myFunction2()" class="button">Green</button>
-	<button name="blue" type="button" onclick="myFunction1()" class="button button2">Blue</button>
-<button type="button" class="button button3" onclick="myFunction()" >Red</button>
+			<button id="green" type="button" class="button">Green</button>
+	<button id="blue" type="button" class="button button2">Blue</button>
+<button id="red" class="button button3"  >Red</button>
 </section>
 	
 	<script>
-function myFunction() {
-    document.getElementById("S3").style.backgroundColor = "red";
-	 document.getElementById("S4").style.backgroundColor = "red";
-	document.getElementById("S2").style.backgroundColor = "red";
-	document.getElementById("h1").style.backgroundColor = "red";
-}
-		function myFunction1() {
-    document.getElementById("S3").style.backgroundColor = "blue";
-	 document.getElementById("S4").style.backgroundColor = "blue";
-	document.getElementById("S2").style.backgroundColor = "blue";
-	document.getElementById("h1").style.backgroundColor = "blue";
-}
-		function myFunction2() {
-    document.getElementById("S3").style.backgroundColor = "green";
-	 document.getElementById("S4").style.backgroundColor = "green";
-	document.getElementById("S2").style.backgroundColor = "green";
-	document.getElementById("h1").style.backgroundColor = "green";
-}
+		document.getElementById('blue').addEventListener('click',function(){
+				 document.getElementById("S3").style.backgroundColor = "blue";	
+		 document.getElementById("S4").style.backgroundColor = "blue";	
+		 document.getElementById("S2").style.backgroundColor = "blue";	
+		 document.getElementById("h1").style.backgroundColor = "blue";	
+														 });
 		
+		document.getElementById('red').addEventListener('click',function(){
+				 document.getElementById("S3").style.backgroundColor = "red";	
+		 document.getElementById("S4").style.backgroundColor = "red";	
+		 document.getElementById("S2").style.backgroundColor = "red";	
+		 document.getElementById("h1").style.backgroundColor = "red";	
+														 });
+		
+		document.getElementById('green').addEventListener('click',function(){
+				 document.getElementById("S3").style.backgroundColor = "green";	
+		 document.getElementById("S4").style.backgroundColor = "green";	
+		 document.getElementById("S2").style.backgroundColor = "green";	
+		 document.getElementById("h1").style.backgroundColor = "green";	
+														 });
+
 </script>
 	
 	

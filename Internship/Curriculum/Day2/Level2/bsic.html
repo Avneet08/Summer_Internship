@@ -54,7 +54,6 @@
 <h2>JavaScript in Body</h2>
 
 <p id="demo">A Paragraph.</p>
-
 <section id="S3" style="background-color: blueviolet; width: 100%;  padding: 10px;">
 		<div class="thin-header-border" style="width: 10%; padding: 30px; background-color: palevioletred">
 		</div>
@@ -63,6 +62,7 @@
 			<p>bdbdhbch</p>
 		</div>
 	</section>
+
     
     
    
@@ -78,6 +78,10 @@
 document.getElementById("S3").style.backgroundColor = "blue";
 }-->
 <script>
+	document.getElementById('red').addEventListener('click',function(){
+		 document.getElementById("S3").style.backgroundColor = "red";
+		
+	});
 function myFunction(id) {
 var str2 = 'red';
 var str1 = 'blue';
@@ -87,6 +91,7 @@ var str3='green';
     var n = str1.localeCompare(id);
     if(n==0){
     document.getElementById("S3").style.backgroundColor = "blue";
+		document.getElementById("S3").innerHTML= "This is blue Color";
     }else if(m==0){
     document.getElementById("S3").style.backgroundColor = "red";
     }else if(o==0){
