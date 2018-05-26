@@ -59,11 +59,17 @@
 				c.setAttribute("class","b1");
 			 c.innerText="initial child node";
 		document.getElementById('basic').appendChild(c);
-		document.getElementById('btn1').addEventListener('click',function(){var c=document.createElement('div');
+
+
+		document.getElementById('btn1').addEventListener('click',function(){
+			var c=document.createElement('div');
 				c.setAttribute("class","b1");
 			 c.innerText="btn 1 is pressed";
-document.getElementById('basic').removeChild(document.getElementById('basic').childNodes[0]);   document.getElementById('basic').appendChild(c);								
-		document.getElementById('basic').setAttribute("style","background-color:green");});
+			document.getElementById('basic').removeChild(document.getElementById('basic').childNodes[0]);   
+			document.getElementById('basic').appendChild(c);								
+			document.getElementById('basic').setAttribute("style","background-color:green");});
+
+
 		document.getElementById('btn2').addEventListener('click',function(){
 			var c=document.createElement('div');
 				c.setAttribute("class","b2");
@@ -75,7 +81,8 @@ document.getElementById('basic').removeChild(document.getElementById('basic').ch
 		document.getElementById('btn3').addEventListener('click',function(){
 			var c=document.createElement('div');
 				c.setAttribute("class","b3");
-			 c.innerText="btn 3 is pressed";document.getElementById('basic').removeChild(document.getElementById('basic').childNodes[0]); 
+			 c.innerText="btn 3 is pressed";
+			 document.getElementById('basic').removeChild(document.getElementById('basic').childNodes[0]); 
 						document.getElementById('basic').appendChild(c);								
 			document.getElementById('basic').setAttribute("style","background-color:blue");
 		});
