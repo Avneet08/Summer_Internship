@@ -3,22 +3,64 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-div {
-    width: 100%;
-    height: 400px;
-    background-image: url('4.jpg');
-    background-repeat: no-repeat;
-    background-size:auto;
-    border: 1px solid red;
+	.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    
+    display: inline-block;
+   
+    font-size: 30px;
 }
-	
+.button3{
+  background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+.button3:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.button2{
+	padding: 16px 32px;
+    text-align: center;
+   
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+	border-style: solid;
+	border-color: blue;
+	text-align: center;
+	font-size: 30px;
+	color:black;
+	 
+}
+.button2:hover {
+    background-color: blue;
+    color: white;
+}
 </style>
 </head>
 <body>
 
-<img src="6.jpg" width=100% height="345">
-<p>Resize the browser window to see how the image will scale when the width is less than 460px.</p>
-	<div></div>
-
+<button class="button">click</button>
+<button class="button2"   onclick="window.location.href='https://www.w3schools.com/css/css_dropdowns.asp'">Hover on me</button>
+<button class="button3">Hover on me</button>
+<form>
+<input type="button"  class=" button2" target="_blank" value="Put Your Text Here" onclick="window.location.href='https://www.w3schools.com/css/css_dropdowns.asp'" />
+</form>
 </body>
 </html>
